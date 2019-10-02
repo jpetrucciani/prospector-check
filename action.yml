@@ -1,0 +1,9 @@
+# action.yml
+name: 'Prospector Check'
+description: 'GitHub action to run prospector on your repository'
+branding:
+  icon: 'check'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
