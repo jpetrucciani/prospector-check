@@ -16,8 +16,8 @@ def error(
 def main(file_path: str) -> None:
     """read the given file, and print errors"""
     data = {}
-    with open(file_path, "r") as file:
-        data = json.loads(file.read())
+    with open(file_path) as file:
+        data = json.load(file)
 
     for msg in data["messages"]:
         loc = msg["location"]
