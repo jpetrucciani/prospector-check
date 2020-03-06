@@ -12,6 +12,6 @@ prospector -o json:"$json_file" -o text
 exit_code=$?
 
 # analyze json
-python github.py "$json_file"
+python /github.py "$json_file"
 
 exit $exit_code
