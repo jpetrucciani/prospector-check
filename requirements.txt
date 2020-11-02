@@ -1,1 +1,1 @@
-prospector[with_everything]==1.3.0
+prospector[with_everything]==1.3.1
