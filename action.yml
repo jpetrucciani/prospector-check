@@ -4,6 +4,13 @@ description: 'GitHub action to run prospector on your repository'
 branding:
   icon: 'check'
   color: 'blue'
+inputs:
+  prospector_flags:
+    description: 'Optional prospector flags (refer to `prospector --help`)'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.prospector_flags }}
