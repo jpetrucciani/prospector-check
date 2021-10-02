@@ -8,7 +8,8 @@ json_file="/tmp/prospector.json"
 prospector --version
 
 # run prospector, save exit code
-prospector -o json:"$json_file" -o text
+# shellcheck disable=2086
+prospector $1 -o json:"$json_file" -o text
 exit_code=$?
 
 # analyze json
