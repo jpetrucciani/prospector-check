@@ -7,7 +7,6 @@ ADD entrypoint.sh /entrypoint.sh
 ADD github.py /github.py
 
 RUN apk add gcc musl-dev && \
-    pip install -r requirements.txt && \
-    pip install pylint==2.15.6  # this is pinned to stop the broken lookup
+    pip install -r requirements.txt
 
 ENTRYPOINT ["/entrypoint.sh"]
