@@ -11,12 +11,12 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.11'
           architecture: x64
       - name: check version
         run: |
           pip install -U prospector
-          pip freeze | grep 'prospector==' | sed -E 's#(prospector)#\1\[with_everything\]#g' >requirements.txt
+          pip freeze | grep 'prospector==' >requirements.txt
       - uses: peter-evans/create-pull-request@v3.10.0
         id: new_pull_request
         with:
