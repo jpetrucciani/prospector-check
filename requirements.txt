@@ -1,1 +1,1 @@
-prospector[with_everything]==1.16.1
+prospector[with_everything]==1.17.1
